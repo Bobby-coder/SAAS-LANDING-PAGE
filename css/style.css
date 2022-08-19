@@ -14,25 +14,19 @@
     font-family: 'Poppins', sans-serif;
 }
 
-
-
-.background-img{
-    width: 100%;
+.container{
     background-image: url("/assets/bg.svg");
     background-repeat: no-repeat;
     background-size: cover;
-    position: absolute;
-    z-index: -1;
-    height: 100vh;
+    padding-bottom: 50px;
 }
 
 .nav{
-    width: 80%;
+    padding: 0 5%;
     height: 15vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 auto;
 }
 
 .nav-logo{
@@ -63,6 +57,7 @@
 }
 
 .section{
+    padding: 0 5%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -118,7 +113,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin: 100px auto;
+    margin: 50px auto;
 }
 
 .left-container > img{
@@ -218,4 +213,84 @@
     color: var(--white);
     padding-bottom: 10px;
     border-radius: 10px;
+}
+
+.menu-icon{
+    display: none;
+}
+
+@media only screen and (max-width: 1000px){
+
+    br{
+        display: none;
+    }
+
+    .nav{
+        height: 64px;
+    }
+
+    .nav-logo{
+        height: 30px;
+    }
+
+    .list{
+        display: none;
+    }
+
+    .menu-icon{
+        display: block;
+        height: 30px;
+    }
+
+    .section{
+        flex-direction: column-reverse;
+        gap: 15px;
+    }
+
+    .section-left{
+        margin-top: 0;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .section-left > h1{
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .section-left > p{
+        font-size: 12px;
+    }
+
+    .section-left > button {
+        font-size: 12px;
+        align-self: center;
+    }
+
+    .section-right{
+        width: 90%;
+        height: auto;
+    }
+
+    .section-right > img{
+        max-height: 300px;
+    }
+
+    .feature-container{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .left-container > img{
+        width: 100%;
+    }
+
+    .feature-container-two > h1{
+        font-size: 30px;
+    }
+
+    .feature-card-row{
+        flex-direction: column;
+    }
+
 }
